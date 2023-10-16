@@ -1,0 +1,4 @@
+[submodule "scripts/Real-ESRGAN"]
+	path = scripts/Real-ESRGAN
+	url = https://github.com/xinntao/Real-ESRGAN.git
+	ignore = dirty

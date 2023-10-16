@@ -1,0 +1,15 @@
+#Ignore Uploaded images
+scripts/uploads/*.jpeg
+scripts/uploads/*.jpg
+scripts/uploads/*.png
+scripts/Real-ESRGAN/inputs/*
+scripts/Real-ESRGAN/results/*
+demo.hone.moe/images/*.jpeg
+demo.hone.moe/images/*.jpg
+demo.hone.moe/images/*.png
+scripts/filename.txt 
+scripts/extension.txt 
+scripts/model.txt 
+scripts/esr_log.txt 
+scripts/rembg_log.txt
+scripts/gfpgan/*
