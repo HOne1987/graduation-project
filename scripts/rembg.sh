@@ -22,8 +22,8 @@ unset __conda_setup
 #Activate Conda Environment
 conda activate rembg &&
 #Remove The Background from the image using rembg and save the output to the demo.hone.moe/images/ directory
-rembg i uploads/$filename /srv/http/demo.hone.moe/images/$filename >> rembg_log.txt &&
-#Make sure image is accessible from webserver
+tsp -f -n rembg i uploads/$filename /srv/http/demo.hone.moe/images/$filename >> rembg_log.txt &&
+#Check if the output image is produced and make sure the output image is accessible from webserver
 chmod 755 /srv/http/demo.hone.moe/images/$filename &&
 #Show page showing the image
 export filename=$filename &&

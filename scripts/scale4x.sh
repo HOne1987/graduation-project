@@ -25,10 +25,9 @@ rm -rf Real-ESRGAN/results/* || true &&
 conda activate newrealesrgan &&
 #Upscale the image using realesrgan_inference.py and move the output to the demo.hone.moe/images/ directory
 mv uploads/$filename Real-ESRGAN/inputs/ &&
-python Real-ESRGAN/inference_realesrgan.py -n realesr-general-x4v3 -i Real-ESRGAN/inputs -o Real-ESRGAN/results --face_enhance --fp32 >> esr_log.txt &&
+tsp -f -n python Real-ESRGAN/inference_realesrgan.py -n realesr-general-x4v3 -i Real-ESRGAN/inputs -o Real-ESRGAN/results --face_enhance --fp32 >> esr_log.txt &&
+#Check if the output image is produced and make sure the output image is accessible from webserver
 mv Real-ESRGAN/results/* /srv/http/demo.hone.moe/images/$filename &&
-#Make sure image is accessible from webserver
 chmod 755 /srv/http/demo.hone.moe/images/$filename &&
-#Show page showing the image
 export filename=$filename &&
 awk '{while(match($0,"[$]{[^}]*}")) {var=substr($0,RSTART+2,RLENGTH -3);gsub("[$]{"var"}",ENVIRON[var])}}1' < /srv/http/demo.hone.moe/result.html
