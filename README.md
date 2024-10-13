@@ -11,5 +11,5 @@ And as for the Manual editor, you'll be able to upload your image and edit it ma
 ![image](https://github.com/user-attachments/assets/3614952f-f24f-4ddf-b725-4f5e541e374e)
 
 ## Is there a live demo of this website?
-Due to the high costs of renting shared servers, there is no live demo at this moment..
-This project requires a shared server with a high performance CPU, we used a free DigitalOcean plan that lasted for around a month to run the website before it inevitably went down. 
+Due to the high costs of renting the appropriate servers for this project, there is no live demo at this moment..
+This project requires a shared or dedicated server with a high performance CPU, we used a free DigitalOcean plan that lasted for around a month to run the website.
